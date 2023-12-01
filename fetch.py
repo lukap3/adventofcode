@@ -7,9 +7,9 @@ from aocd.models import Puzzle
 from bs4 import BeautifulSoup
 
 year = int(sys.argv[1])
-day = int(sys.argv[2])
+day = sys.argv[2]
 
-puzzle = Puzzle(year=year, day=day)
+puzzle = Puzzle(year=year, day=int(day))
 data = puzzle.input_data
 
 f = open(f"data{year}/day{day}/data.txt", "w")

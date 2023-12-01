@@ -5,10 +5,12 @@ day_numbers=$(find "$directory" -type f -name "day*.py" -exec basename {} \; | g
 
 max_day=$(echo "$day_numbers" | tail -n 1)
 next=$((max_day+1))
+next=$(printf "%02d" $next)
 
 echo "Generating day $next"
 
 mkdir -p data$YEAR
+mkdir -p days$YEAR
 mkdir data$YEAR/day$next
 touch data$YEAR/day$next/data.txt
 touch data$YEAR/day$next/example.txt
