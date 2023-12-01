@@ -7,7 +7,7 @@ class Day(AdventDay):
         "data2023/day1/example.txt": [142, 142],
         "data2023/day1/example2.txt": [209, 281],
     }
-    data_file = "data/day1/data.txt"
+    data_file = "data2023/day1/data.txt"
 
     def parse_file(self, data):
         data = data.split("\n")
