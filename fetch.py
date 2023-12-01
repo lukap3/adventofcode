@@ -12,7 +12,7 @@ day = int(sys.argv[2])
 puzzle = Puzzle(year=year, day=day)
 data = puzzle.input_data
 
-f = open(f"data2023/day{day}/data.txt", "w")
+f = open(f"data{year}/day{day}/data.txt", "w")
 f.write(data + "\n")
 f.close()
 
@@ -25,6 +25,6 @@ instructions = soup.find_all("article", attrs={"class": "day-desc"})
 instructions = "\n".join([str(desc) for desc in instructions]) + "\n"
 
 h = markdownify.markdownify(str(instructions), heading_style="ATX")
-f = open(f"data2023/day{day}/instructions.md", "w")
+f = open(f"data{year}/day{day}/instructions.md", "w")
 f.write(h)
 f.close()
