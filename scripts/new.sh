@@ -18,4 +18,10 @@ touch data/day$next/example.txt
 cp template days/day$next.py
 sed -i '' "s/dayX/day$next/" days/day$next.py
 
-python fetch.py ${YEAR} $next
+if python fetch.py ${YEAR} $next; then
+  echo "Files generated"
+else
+  rm -r data/day$next
+  rm days/day$next.py
+  exit 1
+fi

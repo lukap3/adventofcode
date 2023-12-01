@@ -1,11 +1,11 @@
 new:
-	./scripts/new.sh
+	@./scripts/new.sh
 
 update-last:
-	./scripts/update.sh
+	@./scripts/update.sh
 
 run-last:
-	./scripts/last.sh
+	@./scripts/last.sh
 
 run-all:
-	./scripts/all.sh
+	@./scripts/all.sh
