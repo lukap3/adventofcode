@@ -1,28 +1,24 @@
 days=()
-for entry in days/day*.py
-do
-  dayNum="${entry//[^0-9]/}"
-  days+=("$dayNum")
-done
+directory="days$YEAR"
 
-for n in "${days[@]}" ; do
-    ((n > max)) && max=$n
-done
-next=$((max+1))
+day_numbers=$(find "$directory" -type f -name "day*.py" -exec basename {} \; | grep -o -E '[0-9]+' | sort -n)
+
+max_day=$(echo "$day_numbers" | tail -n 1)
+next=$((max_day+1))
 
 echo "Generating day $next"
 
-mkdir -p data
-mkdir data/day$next
-touch data/day$next/data.txt
-touch data/day$next/example.txt
-cp template days/day$next.py
-sed -i '' "s/dayX/day$next/" days/day$next.py
+mkdir -p data$YEAR
+mkdir data$YEAR/day$next
+touch data$YEAR/day$next/data.txt
+touch data$YEAR/day$next/example.txt
+cp template days$YEAR/day$next.py
+sed -i '' "s/dayX/day$next/" days$YEAR/day$next.py
 
 if python fetch.py ${YEAR} $next; then
   echo "Files generated"
 else
-  rm -r data/day$next
-  rm days/day$next.py
+  rm -r data$YEAR/day$next
+  rm days$YEAR/day$next.py
   exit 1
 fi

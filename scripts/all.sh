@@ -1,4 +1,4 @@
-for entry in ./days/day*.py
+for entry in ./days$YEAR/day*.py
 do
   # Check if the entry is an existing file
   if [ -e "$entry" ]; then

@@ -1,13 +1,7 @@
-days=()
-for entry in days/day*.py
-do
-  dayNum="${entry//[^0-9]/}"
-  days+=("$dayNum")
-done
+directory="days$YEAR"
 
-max=${days[0]}
-for n in "${days[@]}" ; do
-    ((n > max)) && max=$n
-done
+day_numbers=$(find "$directory" -type f -name "day*.py" -exec basename {} \; | grep -o -E '[0-9]+' | sort -n)
 
-python fetch.py ${YEAR} $max
+max_day=$(echo "$day_numbers" | tail -n 1)
+
+python fetch.py ${YEAR} $max_day
