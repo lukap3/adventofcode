@@ -3,8 +3,8 @@ from sympy import solve
 
 
 class Day(AdventDay):
-    test_files = {"data/day21/example.txt": [152, 301]}
-    data_file = "data/day21/data.txt"
+    test_files = {"data2022/day21/example.txt": [152, 301]}
+    data_file = "data2022/day21/data.txt"
 
     operations = {
         "+": lambda x, y: x + y,

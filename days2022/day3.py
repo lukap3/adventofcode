@@ -4,8 +4,8 @@ from advent_day import AdventDay
 
 
 class Day(AdventDay):
-    test_files = {"data/day3/example.txt": [157, 70]}
-    data_file = "data/day3/data.txt"
+    test_files = {"data2022/day3/example.txt": [157, 70]}
+    data_file = "data2022/day3/data.txt"
 
     letters = string.ascii_lowercase + string.ascii_uppercase
 

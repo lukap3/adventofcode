@@ -51,13 +51,13 @@ class State:
 
 
 def get_daily_input():
-    file_data = open("data/day19/data.txt", "r").read()
+    file_data = open("data2022/day19/data.txt", "r").read()
     return file_data.split("\n")[:-1]
 
 
 class Day(AdventDay):
-    test_files = {"data/day19/example.txt": [33, 3472]}
-    data_file = "data/day19/data.txt"
+    test_files = {"data2022/day19/example.txt": [33, 3472]}
+    data_file = "data2022/day19/data.txt"
 
     def parse_file(self, data):
         data = data.split("\n")[:-1]

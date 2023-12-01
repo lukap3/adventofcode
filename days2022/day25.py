@@ -2,8 +2,8 @@ from advent_day import AdventDay
 
 
 class Day(AdventDay):
-    test_files = {"data/day25/example.txt": ["2=-1=0", None]}
-    data_file = "data/day25/data.txt"
+    test_files = {"data2022/day25/example.txt": ["2=-1=0", None]}
+    data_file = "data2022/day25/data.txt"
 
     translate_map = {"2": 2, "1": 1, "0": 0, "-": -1, "=": -2}
 

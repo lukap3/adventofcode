@@ -3,10 +3,10 @@ from advent_day import AdventDay
 
 class Day(AdventDay):
     test_files = {
-        "data/day9/example0.txt": [13, 1],
-        "data/day9/example1.txt": [88, 36],
+        "data2022/day9/example0.txt": [13, 1],
+        "data2022/day9/example1.txt": [88, 36],
     }
-    data_file = "data/day9/data.txt"
+    data_file = "data2022/day9/data.txt"
 
     directions = {"R": (0, 1), "L": (0, -1), "U": (1, 0), "D": (-1, 0)}
 

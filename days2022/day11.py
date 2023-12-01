@@ -64,8 +64,8 @@ class Monkey:
 
 
 class Day(AdventDay):
-    test_files = {"data/day11/example.txt": [10605, 2713310158]}
-    data_file = "data/day11/data.txt"
+    test_files = {"data2022/day11/example.txt": [10605, 2713310158]}
+    data_file = "data2022/day11/data.txt"
 
     def parse_file(self, data):
         blocks = [[]]
