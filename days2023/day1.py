@@ -4,8 +4,8 @@ import re
 
 class Day(AdventDay):
     test_files = {
-        "data/day1/example.txt": [142, 142],
-        "data/day1/example2.txt": [209, 281],
+        "data2023/day1/example.txt": [142, 142],
+        "data2023/day1/example2.txt": [209, 281],
     }
     data_file = "data/day1/data.txt"
 
@@ -25,7 +25,17 @@ class Day(AdventDay):
         return sum(calibration_nums)
 
     def part_2_logic(self, data):
-        s_nums = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+        s_nums = [
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six",
+            "seven",
+            "eight",
+            "nine",
+        ]
         calibration_nums = []
         for line in data:
             all_nums = []
@@ -33,7 +43,7 @@ class Day(AdventDay):
             for i, s_num in enumerate(s_nums):
                 occ = [m.start() for m in re.finditer(s_num, line)]
                 for idx in occ:
-                    all_nums.append((str(i+1), idx))
+                    all_nums.append((str(i + 1), idx))
             # find all occurrences of the digits and their indices
             for i, c in enumerate(line):
                 if c.isnumeric():
