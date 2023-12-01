@@ -59,7 +59,7 @@ Configure the tests by editing the `test_files` dict:
 ```python
 test_files = {
   "data/dayX/example.txt": [
-    "part1_example_solution", 
+    "part1_example_solution",
     "part2_example_solution"
     ]
 }
@@ -71,6 +71,5 @@ The inputs from `days/dayX/example.txt` and `days/dayX/data.txt` are passed to t
 The challenges usually require you to split the input by lines and split the lines by a specific character or something similar.
 Add that logic to the `parse_file` method.
 
-By running the `dayX.py` file directly or by using `makre run-last` the code will first be run using the example 
+By running the `dayX.py` file directly or by using `makre run-last` the code will first be run using the example
 input and checked if it results in the expected solutions provided in the `test_files` dict.
-

@@ -46,7 +46,9 @@ class AdventDay:
             expected = self.test_solutions[i][index]
             result = self._funcs[index](test_data)
             if not result == expected:
-                log(f" {color('x', 'red')} Test {i + 1}: {result} (expected {expected})")
+                log(
+                    f" {color('x', 'red')} Test {i + 1}: {result} (expected {expected})"
+                )
                 return False
             else:
                 log(f"{color('✓', 'green')} Test {i + 1}: {result}")
@@ -61,7 +63,7 @@ class AdventDay:
             end = time.perf_counter()
             exec_time = round((end - start) * 1000, 2)
             if exec_time > 1000:
-                exec_time = str(exec_time/1000) + "s"
+                exec_time = str(exec_time / 1000) + "s"
             else:
                 exec_time = str(exec_time) + "ms"
             log(f"Result: {result} ({exec_time})", 1)

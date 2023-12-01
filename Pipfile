@@ -8,6 +8,7 @@ requests = "*"
 markdownify = "*"
 aocd = "*"
 bs4 = "*"
+pre-commit = "*"
 
 [dev-packages]
 
