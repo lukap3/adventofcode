@@ -12,6 +12,7 @@ next=$((max+1))
 
 echo "Generating day $next"
 
+mkdir -p data
 mkdir data/day$next
 touch data/day$next/data.txt
 touch data/day$next/example.txt
