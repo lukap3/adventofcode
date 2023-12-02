@@ -16,7 +16,7 @@ f = open(f"data{year}/day{day}/data.txt", "w")
 f.write(data + "\n")
 f.close()
 
-url = f"https://adventofcode.com/{year}/day/{day}"
+url = f"https://adventofcode.com/{year}/day/{int(day)}"
 cookies = {"session": os.getenv("AOC_SESSION")}
 resp = requests.get(url, cookies=cookies)  # type: ignore
 soup = BeautifulSoup(resp.content, "html.parser")
