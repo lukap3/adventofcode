@@ -50,10 +50,10 @@ And to update the instructions for part 2 after submitting part 1 run:
 make update-last
 ```
 
-- The instructions will be added to `/data/dayX/instructions.md`
-- The input data will be added to `/data/dayX/data.txt`
-- An example data file will be generated: `data/dayX/example.txt`
-- A new python file will be generated: `days/dayX.py`
+- The instructions will be added to `<YEAR>/data/dayX/instructions.md`
+- The input data will be added to `<YEAR>/data/dayX/data.txt`
+- An example data file will be generated: `<YEAR>/data/dayX/example.txt`
+- A new python file will be generated: `<YEAR>/days/dayX.py`
 
 Configure the tests by editing the `test_files` dict:
 ```python
@@ -67,9 +67,9 @@ test_files = {
 
 Add your logic to `part_1_logic` and `part_2_logic` methods.
 
-The inputs from `days/dayX/example.txt` and `days/dayX/data.txt` are passed to the `part_X_logic` functions.
+The inputs from `<YEAR>/days/dayX/example.txt` and `<YEAR>/days/dayX/data.txt` are passed to the `part_X_logic` functions.
 The challenges usually require you to split the input by lines and split the lines by a specific character or something similar.
 Add that logic to the `parse_file` method.
 
-By running the `dayX.py` file directly or by using `makre run-last` the code will first be run using the example
+By running the `dayX.py` file directly or by using `make run-last` the code will first be run using the example
 input and checked if it results in the expected solutions provided in the `test_files` dict.

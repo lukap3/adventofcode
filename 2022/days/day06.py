@@ -3,13 +3,13 @@ from advent_day import AdventDay
 
 class Day(AdventDay):
     test_files = {
-        "data2022/day06/example0.txt": [7, 19],
-        "data2022/day06/example1.txt": [5, 23],
-        "data2022/day06/example2.txt": [6, 23],
-        "data2022/day06/example3.txt": [10, 29],
-        "data2022/day06/example4.txt": [11, 26],
+        "2022/data/day06/example0.txt": [7, 19],
+        "2022/data/day06/example1.txt": [5, 23],
+        "2022/data/day06/example2.txt": [6, 23],
+        "2022/data/day06/example3.txt": [10, 29],
+        "2022/data/day06/example4.txt": [11, 26],
     }
-    data_file = "data2022/day06/data.txt"
+    data_file = "2022/data/day06/data.txt"
 
     def parse_file(self, data):
         return data.split("\n")[0]

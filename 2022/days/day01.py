@@ -3,9 +3,9 @@ from advent_day import AdventDay
 
 class Day(AdventDay):
     test_files = {
-        "data2022/day01/example.txt": [24000, 45000],
+        "2022/data/day01/example.txt": [24000, 45000],
     }
-    data_file = "data2022/day01/data.txt"
+    data_file = "2022/data/day01/data.txt"
 
     def parse_file(self, data):
         return data.split("\n")

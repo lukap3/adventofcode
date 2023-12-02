@@ -3,8 +3,8 @@ import re
 
 
 class Day(AdventDay):
-    test_files = {"data2023/day02/example.txt": [8, 2286]}
-    data_file = "data2023/day02/data.txt"
+    test_files = {"2023/data/day02/example.txt": [8, 2286]}
+    data_file = "2023/data/day02/data.txt"
 
     def parse_file(self, data):
         data = data.split("\n")

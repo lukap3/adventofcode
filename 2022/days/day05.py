@@ -9,8 +9,8 @@ def chunk(lst, chunk_size=4):
 
 
 class Day(AdventDay):
-    test_files = {"data2022/day05/example.txt": ["CMZ", "MCD"]}
-    data_file = "data2022/day05/data.txt"
+    test_files = {"2022/data/day05/example.txt": ["CMZ", "MCD"]}
+    data_file = "2022/data/day05/data.txt"
 
     def parse_file(self, data):
         crates_r = re.compile("\[(\w)]| {4}")

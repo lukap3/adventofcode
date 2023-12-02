@@ -4,8 +4,8 @@ from advent_day import AdventDay
 
 
 class Day(AdventDay):
-    test_files = {"data2022/day17/example.txt": [3068, 1514285714288]}
-    data_file = "data2022/day17/data.txt"
+    test_files = {"2022/data/day17/example.txt": [3068, 1514285714288]}
+    data_file = "2022/data/day17/data.txt"
 
     rocks = [
         (1, [(0, 2), (0, 3), (0, 4), (0, 5)]),

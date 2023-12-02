@@ -5,8 +5,8 @@ from advent_day import AdventDay
 
 
 class Day(AdventDay):
-    test_files = {"data2022/day22/example.txt": [6032, 5031]}
-    data_file = "data2022/day22/data.txt"
+    test_files = {"2022/data/day22/example.txt": [6032, 5031]}
+    data_file = "2022/data/day22/data.txt"
 
     clock = ["R", "D", "L", "U"]
     directions = {"R": (0, 1), "L": (0, -1), "U": (-1, 0), "D": (1, 0)}

@@ -1,5 +1,5 @@
 days=()
-directory="days$YEAR"
+directory="$YEAR/days"
 
 day_numbers=$(find "$directory" -type f -name "day*.py" -exec basename {} \; | grep -o -E '[0-9]+' | sort -n)
 
@@ -9,18 +9,19 @@ next=$(printf "%02d" $next)
 
 echo "Generating day $next"
 
-mkdir -p data$YEAR
-mkdir -p days$YEAR
-mkdir data$YEAR/day$next
-touch data$YEAR/day$next/data.txt
-touch data$YEAR/day$next/example.txt
-cp template days$YEAR/day$next.py
-sed -i '' "s/dayX/day$next/" days$YEAR/day$next.py
+mkdir -p $YEAR
+mkdir -p $YEAR/data
+mkdir -p $YEAR/days
+mkdir $YEAR/data/day$next
+touch $YEAR/data/day$next/data.txt
+touch $YEAR/data/day$next/example.txt
+cp template $YEAR/days/day$next.py
+sed -i '' "s/dayX/day$next/" $YEAR/days/day$next.py
 
 if python fetch.py ${YEAR} $next; then
   echo "Files generated"
 else
-  rm -r data$YEAR/day$next
-  rm days$YEAR/day$next.py
+  rm -r $YEAR/data/day$next
+  rm $YEAR/days/day$next.py
   exit 1
 fi

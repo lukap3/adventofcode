@@ -1,4 +1,4 @@
-directory="days$YEAR"
+directory="$YEAR/days"
 
 day_numbers=$(find "$directory" -type f -name "day*.py" -exec basename {} \; | grep -o -E '[0-9]+' | sort -n)
 

@@ -6,8 +6,8 @@ from advent_day import AdventDay
 
 
 class Day(AdventDay):
-    test_files = {"data2022/day16/example.txt": [1651, 1707]}
-    data_file = "data2022/day16/data.txt"
+    test_files = {"2022/data/day16/example.txt": [1651, 1707]}
+    data_file = "2022/data/day16/data.txt"
 
     def __init__(self):
         super().__init__()
