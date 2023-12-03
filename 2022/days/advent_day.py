@@ -1,6 +1,6 @@
+import time
 from copy import deepcopy
 from typing import Any, Dict, List
-import time
 
 
 def color(text, cl):

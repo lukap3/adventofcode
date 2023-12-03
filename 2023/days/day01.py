@@ -1,5 +1,6 @@
-from advent_day import AdventDay
 import re
+
+from advent_day import AdventDay
 
 
 class Day(AdventDay):
