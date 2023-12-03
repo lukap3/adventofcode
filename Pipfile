@@ -12,6 +12,7 @@ pre-commit = "*"
 dijkstar = "*"
 networkx = "*"
 sympy = "*"
+numpy = "*"
 
 [dev-packages]
 
