@@ -4,6 +4,9 @@ new:
 update-last:
 	@./scripts/update.sh
 
+update-all:
+	@./scripts/update_all.sh
+
 run-last:
 	@./scripts/last.sh
 

@@ -24,7 +24,7 @@ soup = BeautifulSoup(resp.content, "html.parser")
 instructions = soup.find_all("article", attrs={"class": "day-desc"})
 instructions = "\n".join([str(desc) for desc in instructions]) + "\n"
 
-h = markdownify.markdownify(str(instructions), heading_style="ATX")
+h = markdownify.markdownify(str(instructions), heading_style="ATX").rstrip("\n") + "\n"
 f = open(f"{year}/data/day{day}/instructions.md", "w")
 f.write(h)
 f.close()
