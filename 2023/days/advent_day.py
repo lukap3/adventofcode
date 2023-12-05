@@ -1,3 +1,4 @@
+import os
 import time
 from copy import deepcopy
 from typing import Any, Dict, List
@@ -28,6 +29,8 @@ class AdventDay:
         self.run()
 
     def read_file(self, file: str) -> str:
+        if not os.path.exists(file):
+            raise FileNotFoundError(f"Input data file ({file}) missing")
         file_data = open(file, "r").read()
         return self.parse_file(file_data)
 
