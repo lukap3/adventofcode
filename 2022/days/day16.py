@@ -2,7 +2,7 @@ import re
 from copy import copy
 
 import networkx as nx
-from advent_day import AdventDay
+from lib import AdventDay
 
 
 class Day(AdventDay):

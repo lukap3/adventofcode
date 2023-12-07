@@ -2,7 +2,7 @@ from collections import Counter, defaultdict
 from copy import copy
 from functools import cmp_to_key
 
-from advent_day import AdventDay
+from lib import AdventDay
 
 
 class Day(AdventDay):

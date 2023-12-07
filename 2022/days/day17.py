@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from advent_day import AdventDay
+from lib import AdventDay
 
 
 class Day(AdventDay):

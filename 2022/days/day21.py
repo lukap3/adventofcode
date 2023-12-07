@@ -1,4 +1,4 @@
-from advent_day import AdventDay
+from lib import AdventDay
 from sympy import solve
 
 

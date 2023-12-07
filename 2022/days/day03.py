@@ -1,6 +1,6 @@
 import string
 
-from advent_day import AdventDay
+from lib import AdventDay
 
 
 class Day(AdventDay):

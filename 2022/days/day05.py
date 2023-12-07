@@ -1,6 +1,6 @@
 import re
 
-from advent_day import AdventDay
+from lib import AdventDay
 
 
 def chunk(lst, chunk_size=4):

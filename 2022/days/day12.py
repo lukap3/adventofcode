@@ -1,5 +1,5 @@
-from advent_day import AdventDay
 from dijkstar import Graph, NoPathError, find_path
+from lib import AdventDay
 
 
 class Day(AdventDay):

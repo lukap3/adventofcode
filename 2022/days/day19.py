@@ -1,7 +1,7 @@
 import re
 from threading import Thread
 
-from advent_day import AdventDay
+from lib import AdventDay
 
 
 class Blueprint:
