@@ -13,6 +13,8 @@ dijkstar = "*"
 networkx = "*"
 sympy = "*"
 numpy = "*"
+setuptools = "*"
+advent-of-py = {git = "https://github.com/lukap3/advent-of-py"}
 
 [dev-packages]
 
