@@ -61,8 +61,7 @@ class Day(AdventDay):
 
                 # check if target is hit, update min_path and min_cost
                 if position == target and queue[position_key][1] < min_cost:
-                    min_path = queue[position_key][0]
-                    min_cost = queue[position_key][1]
+                    min_path, min_cost = queue[position_key]
 
                 path, cost = queue.pop(position_key)
                 moves = self.get_moves(grid, position, path, ultra)
