@@ -82,8 +82,6 @@ class Day(AdventDay):
 
     @classmethod
     def split_by_rules(cls, part, rules):
-        from collections import defaultdict
-
         dests = defaultdict(list)
         for rule in rules:
             if ":" in rule:
